@@ -1,0 +1,22 @@
+.card{
+    width: 150px;
+    height: 150px;
+    margin: 1rem;
+    border: solid 6px white;
+    position: relative;
+    box-shadow: 0 5px 8px black;
+    text-align: center;
+
+}
+.card > .card-image {
+    height: 100%;
+    overflow: hidden;
+    background:red;
+}
+
+.card > .card-image > .card-title {
+    font-size: 15px;
+   
+     
+}
+

@@ -1,0 +1,75 @@
+[
+    {
+        "id": 1,
+        "name": "Bobbie Draper",
+        "image": "./images/Bobbie_Draper.jpg",
+        "clicked": false
+    },
+    {
+        "id": 2,
+        "name": "Asmos Burton",
+        "image": "./images/Amos_Burton.jpg",
+        "clicked": false
+    },
+    {
+        "id": 3,
+        "name": "Alex Kamal",
+        "image": "./images/Alex_Kamal.jpg",
+        "clicked": false
+    },
+    {
+        "id": 4,
+        "name": "James Holden",
+        "image": "./images/James_Holden.jpg",
+        "clicked": false
+    },
+    {
+        "id": 5,
+        "name": "Chrisjen Avasarala",
+        "image": "./images/Chrisjen_Avasarala.jpg",
+        "clicked": false
+    },
+    {
+        "id": 6,
+        "name": "Dt. Josephus Miller",
+        "image": "./images/Josephus_Miller.jpg",
+        "clicked": false
+    },
+    {
+        "id": 7,
+        "name": "Naomi Nagata",
+        "image": "./images/Naomi_Nagata.jpg",
+        "clicked": false
+    },
+    {
+        "id": 8,
+        "name": "Julie Mao",
+        "image": "./images/Julie_Mao.jpg",
+        "clicked": false
+    },
+    {
+        "id": 9,
+        "name": "Fred Johnson",
+        "image": "./images/Fred_Johnson.jpg",
+        "clicked": false
+    },
+    {
+        "id": 10,
+        "name": "Camina Drummer",
+        "image": "./images/Camina_Drummer.jpg",
+        "clicked": false
+    },
+    {
+        "id": 11,
+        "name": "Cotyar Ghazi",
+        "image": "./images/Cotyar_standing.jpg",
+        "clicked": false
+    },
+    {
+        "id": 12,
+        "name": "Jules-Pierre_Mao",
+        "image": "./images/Jules-Pierre_Mao.jpg",
+        "clicked": false
+    }
+    
+]
