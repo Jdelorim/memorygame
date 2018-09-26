@@ -14,7 +14,7 @@ state={
   //destructed from expanse: expanse
   expanse,
   score: 0,
-  topScore:500, 
+  topScore: 0, 
   click: false
 
 }
@@ -22,11 +22,16 @@ state={
 shuffleArr = array => array.sort((a,b) => 0.5 - Math.random());
 
 cardClick = (id, click) => {
-//  let newScore = this.state.score++;
-//  let newClick = this.state.click = true;
+  let newScore = this.state.score++;
+  let newClick = this.state.click = true;
+
+  if(newClick === true){
+    alert("you loose");
+  }
 this.setState({
-   score: this.state.score++,
-  // click: true
+  expanse,
+  newScore: this.state.score,
+  click: newClick
 });
 
   if(click === true){
