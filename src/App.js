@@ -6,13 +6,13 @@ import expanse from "./expanse.json";
 
 import './App.css';
 
-
+//
 
 class App extends Component {
  
 state={
   //destructed from expanse: expanse
-  expanse,
+  cards: [...expanse],
   score: 0,
   topScore: 0, 
   click: false
@@ -21,25 +21,17 @@ state={
 
 shuffleArr = array => array.sort((a,b) => 0.5 - Math.random());
 
-cardClick = (id, click) => {
-  let newScore = this.state.score++;
-  let newClick = this.state.click = true;
+handleClick = id => {
 
-  if(newClick === true){
-    alert("you loose");
-  }
+const tempClick = this.state.click;
+
 this.setState({
-  expanse,
-  newScore: this.state.score,
-  click: newClick
+  score: this.state.score+1,
+  click: true
+
 });
 
-  if(click === true){
-    alert("alreadyClicked");
-  }
   
- 
- 
   console.log(`Card clicked!", ${id}, ${this.state.click}`);
 }
 
@@ -57,13 +49,13 @@ this.setState({
     
     />
     {
-      this.shuffleArr(this.state.expanse).map((i) => (
+      this.shuffleArr(this.state.cards).map((i) => (
          <Card
          id = {i.id}
          click={i.click}
          name = {i.name}
          image = {i.image}
-         handleClick={(i.id,this.cardClick)}
+         handleClick={this.handleClick}
          />
      ))
      }
