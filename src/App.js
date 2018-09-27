@@ -15,21 +15,31 @@ state={
   cards: [...expanse],
   score: 0,
   topScore: 0, 
-  click: false
-
+  click: false,
+  newArr: []
 }
 
 shuffleArr = array => array.sort((a,b) => 0.5 - Math.random());
 
 handleClick = id => {
 
-const tempClick = this.state.click;
+if (this.state.newArr.indexOf(id) === -1) {
+    this.state.newArr.push(id);
+    let newScore = this.state.score + 1;
+    this.setState({
+      score: newScore
+    });
+} else {
+  alert("you lost!");
+  this.setState({
+    topScore: this.state.score,
+    score: 0,
+    newArr: []
+    
+  });
+}
 
-this.setState({
-  score: this.state.score+1,
-  click: true
 
-});
 
   
   console.log(`Card clicked!", ${id}, ${this.state.click}`);
