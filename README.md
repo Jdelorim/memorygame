@@ -1,14 +1,15 @@
-[Goal]
+**Goal**
 First REACT.js program. A memory game click all 12 but don't click on the same one twice!
 
-[Install]
+**Install**
 Clone the repository then run npm install at the root level.
 
-[Technologies Used]
-- REACT.js
-- Materalize
-- Javascript
+**Technologies Used**
+* REACT.js
+* Materalize
+* Javascript
 
-[Author]
+**Author**
 Created by Joshua deLorimier
+https://jjdprofile.herokuapp.com/
 
