@@ -16,33 +16,43 @@ state={
   score: 0,
   topScore: 0, 
   click: false,
-  newArr: []
+  newId: []
 }
 
 shuffleArr = array => array.sort((a,b) => 0.5 - Math.random());
 
 handleClick = id => {
 
-if (this.state.newArr.indexOf(id) === -1) {
-    this.state.newArr.push(id);
+if (this.state.newId.indexOf(id) === -1) {
+    this.state.newId.push(id);
     let newScore = this.state.score + 1;
     this.setState({
       score: newScore
     });
 } else {
   alert("you lost!");
+  let newScore = this.state.score;
+  if(newScore > this.state.topScore) {
+    alert("new score it greater!");
+    console.log(`newSCore: ${newScore}, ${this.state.topScore}`);
+    this.setState({
+      topScore: newScore,
+      score: 0,
+      newId: []
+    });
+  } else {
   this.setState({
-    topScore: this.state.score,
+    topScore: this.state.topScore,
     score: 0,
-    newArr: []
+    newId: []
     
   });
 }
-
+}
 
 
   
-  console.log(`Card clicked!", ${id}, ${this.state.click}`);
+  console.log(`topScore", ${this.state.topScore}`);
 }
 
 
