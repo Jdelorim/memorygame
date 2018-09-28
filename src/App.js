@@ -19,18 +19,21 @@ state={
   newId: []
 }
 
-shuffleArr = array => array.sort((a,b) => 0.5 - Math.random());
+shuffleArr = arr => arr.sort((a,b) => 0.5 - Math.random());
 
-handleClick = id => {
 
-if (this.state.newId.indexOf(id) === -1) {
-    this.state.newId.push(id);
-    let newScore = this.state.score + 1;
+handleWin = () => {
+    alert("you won!");
+    let newScore = this.state.score;
     this.setState({
-      score: newScore
+      topScore: 12,
+      score: 0,
+      newId: []
     });
-} else {
-  alert("you lost!");
+};
+
+handleLoose = () => {
+  alert("you Loose!");
   let newScore = this.state.score;
   if(newScore > this.state.topScore) {
     alert("new score it greater!");
@@ -40,18 +43,33 @@ if (this.state.newId.indexOf(id) === -1) {
       score: 0,
       newId: []
     });
-  } else {
+  
+} else {
   this.setState({
     topScore: this.state.topScore,
     score: 0,
     newId: []
-    
   });
 }
 }
 
+handleClick = id => {
+if (this.state.newId.indexOf(id) === -1) {
+    this.state.newId.push(id);
+    let newScore = this.state.score + 1;
+    if(newScore === 12) {
+      this.handleWin();
+    } else {
+    this.setState({
+      score: newScore
+      
+    });
+  }
+    
+} else {
 
-  
+  this.handleLoose();
+}
   console.log(`topScore", ${this.state.topScore}`);
 }
 
