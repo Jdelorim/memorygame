@@ -24,7 +24,7 @@ shuffleArr = arr => arr.sort((a,b) => 0.5 - Math.random());
 
 handleWin = () => {
     alert("you won!");
-    let newScore = this.state.score;
+    
     this.setState({
       topScore: 12,
       score: 0,
