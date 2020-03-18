@@ -14,5 +14,5 @@ Clone the repository then run npm install at the root level.
 # Author
 
 Created by Joshua deLorimier
-https://jjdprofile.herokuapp.com/
+https://www.joshuadelorimier.com
 
